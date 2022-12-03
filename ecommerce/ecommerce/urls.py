@@ -18,10 +18,13 @@ from django.urls import path, include
 
 from django.conf import settings
 from django.conf.urls.static import static
+from django.views.generic import TemplateView
 
 urlpatterns = [
     path('', include('base.urls')),
     path('products/', include('products.urls')),
+    path('search/', include('search.urls')),
+    path('bootstrap/', TemplateView.as_view(template_name="bootstrap/example.html")),
     path('admin/', admin.site.urls),
 ]
 

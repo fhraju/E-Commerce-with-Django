@@ -1,7 +1,12 @@
 {% extends 'base.html' %}
 
 {% block 'content' %}
+<div class="row">
     {% for product in object_list %}
-    <a href="{{ product.get_absolute_url }}">{{ product }}</br></a>
+        <div class="col-auto">
+
+        {% include 'products/snippets/card.html' with instance=product %}
+        </div>
     {% endfor %}
+</div>
 {% endblock 'content' %}

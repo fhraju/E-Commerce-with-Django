@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     # Project apps
     'base.apps.BaseConfig',
     'products.apps.ProductsConfig',
+    'search.apps.SearchConfig',
 
     'django.contrib.admin',
     'django.contrib.auth',
