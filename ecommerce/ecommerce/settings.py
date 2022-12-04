@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'base.apps.BaseConfig',
     'products.apps.ProductsConfig',
     'search.apps.SearchConfig',
+    'tags.apps.TagsConfig',
 
     'django.contrib.admin',
     'django.contrib.auth',
