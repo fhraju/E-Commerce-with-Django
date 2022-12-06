@@ -16,10 +16,6 @@
           <li class="nav-item">
             <a class="nav-link" href="{% url 'products-list' %}">Products</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'contact' %}">Contact</a>
-          </li>
-
           {% if user.is_authenticated %}
             <li class="nav-item">
                 <a class="nav-link" href="{% url 'login' %}">Logout</a>
@@ -30,16 +26,18 @@
             <li class="nav-item">
                 <a class="nav-link" href="{% url 'register' %}">Register</a>
           {% endif %}
-          <li class="nav-item dropdown">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'cart' %}">{{ request.session.cart_items }} <i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+          {% comment %} <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Link
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="{% url 'contact' %}">Contact</a></li>
               <li><a class="dropdown-item" href="#">Another action</a></li>
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
+            </ul> {% endcomment %}
           </li>
         </ul>
         {% include 'search/snippets/search_form.html' %}
