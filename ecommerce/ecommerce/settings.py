@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'search.apps.SearchConfig',
     'tags.apps.TagsConfig',
     'carts.apps.CartsConfig',
+    'orders.apps.OrdersConfig',
+    'accounts.apps.AccountsConfig',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -56,6 +58,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+LOGOUT_REDIRECT_URL = '/accounts/login/'
 ROOT_URLCONF = 'ecommerce.urls'
 
 TEMPLATES = [
